@@ -186,6 +186,7 @@ lval* builtin_op(lval* a, char* op) {
     lval* y = lval_pop(a, 0);
     if (strcmp(op, "+") == 0) { x->num += y->num;}
     if (strcmp(op, "*") == 0) { x->num *= y->num;}
+    if (strcmp(op, "-") == 0) { x->num -= y->num; }
     if (strcmp(op, "^") == 0) { x->num = pow(y->num, x->num);}
     if (strcmp(op, "min") == 0) { x->num = x->num < y->num ? x->num : y->num; }
     if (strcmp(op, "max") == 0) { x->num = x->num > y->num ? x->num : y->num; }
